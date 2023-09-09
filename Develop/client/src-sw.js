@@ -30,6 +30,6 @@ registerRoute(({ request }) => {
 
 
 offlineFallback({
-  pageFallback: '/index.html',
+  pageFallback: '/dist/index.html',
   imageFallback: '/src/images/logo.png',
 });

@@ -5,7 +5,7 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
   return {
-    mode: 'development',
+    mode: 'production',
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
@@ -16,7 +16,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html', // Path to your HTML template
+        template: './dist/index.html', // Path to your HTML template
         filename: 'index.html', // Output HTML file name
         chunks: ['main'], // Include only the 'main' bundle
       }),
