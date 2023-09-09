@@ -22,10 +22,10 @@
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^4.9.1"
   },
   "engines": {
-    "node": "20.x",
-    "npm": "9.x"
+    "node": "14.x",
+    "npm": "6.x"
   }
 }
