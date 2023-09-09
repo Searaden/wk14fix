@@ -31,5 +31,5 @@ registerRoute(({ request }) => {
 
 offlineFallback({
   pageFallback: '/dist/index.html',
-  imageFallback: '/src/images/logo.png',
+  imageFallback: '/src/images/icon.png',
 });

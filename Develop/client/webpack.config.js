@@ -8,7 +8,7 @@ module.exports = () => {
     mode: 'production',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -16,9 +16,8 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './dist/index.html', // Path to your HTML template
-        filename: 'index.html', // Output HTML file name
-        chunks: ['main'], // Include only the 'main' bundle
+        template: './src/index.html',
+        filename: 'index.html',
       }),
       new WebpackPwaManifest({
         name: 'Your App Name',
@@ -28,17 +27,23 @@ module.exports = () => {
         theme_color: '#000000',
         icons: [
           {
-            src: path.resolve('src/images/icon.png'), // Path to your app's icon
-            sizes: [96, 128, 192, 256, 384, 512], // Icon sizes
+            src: path.resolve('src/images/icon.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: 'assets/icons', // Corrected destination path
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src-sw.js', // Path to your service worker file
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js', // Corrected destination path
       }),
     ],
     module: {
       rules: [
+        { 
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
         {
           test: /\.js$/,
           exclude: /node_modules/,
