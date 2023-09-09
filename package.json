@@ -2,7 +2,7 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "cautious-meme/Develop/server/server.js",
+  "main": "Develop/server/server.js",
   "scripts": {
     "start:dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js",
