@@ -10,7 +10,6 @@
     "build": "cd Develop/client && npm run build",
     "install": "cd Develop/server && npm install && cd ../client && npm install",
     "client": "cd Develop/client && npm start"
-
   },
   "keywords": [],
   "author": "",
@@ -21,7 +20,9 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "engines": {
     "node": "20.x",
