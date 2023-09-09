@@ -22,7 +22,8 @@
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
     "webpack": "^5.88.2",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "html-webpack-plugin": "^5.5.0"
   },
   "engines": {
     "node": "20.5.1",
